@@ -11,6 +11,7 @@
         <activity android:name=".MainActivity">
 
         </activity>
+        <activity android:name=".test1.TestActivity"/>
     </application>
 
 </manifest>
