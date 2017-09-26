@@ -188,7 +188,7 @@ public inline fun <R> run(block: () -> R): R = block()
 ```
 
 你一定会好奇:run方法明明有一个参数，为何不见了呢？
-如果最后一个参数是block()可以略过.我们也可以写一个这样的方法myRun
+如果最后一个参数是block()可以用大括号括起来.我们也可以写一个这样的方法myRun
 
 ```kotlin
 fun myRun(t: String, block: (String) -> Unit) {
