@@ -161,7 +161,7 @@ mn(1, 2, { f: Float, s: String ->
 
 ## 解迷Standard.kt里的一些函数库
 
-### run
+### run()函数
 
 ```kotlin
  run {
@@ -212,7 +212,7 @@ myRun1("hello", block1) {
 
 }
 ``` 
-### let
+### let()函数
 ```kotlin
 public inline fun <T, R> T.let(block: (T) -> R): R = block(this)
 
@@ -234,7 +234,7 @@ public inline fun <T, R> T.let(block: (T) -> R): R = block(this)
 
 ```
 
-再看with函数
+### with()函数
 ```kotlin
 public inline fun <T, R> with(receiver: T, block: T.() -> R): R = receiver.block()
 
@@ -317,7 +317,7 @@ person1.age = 11
 person1.name = "11"
 
 ```
-### apply
+### apply()函数
 
 ```kotlin
 public inline fun <T> T.apply(block: T.() -> Unit): T { block(); return this }
@@ -332,7 +332,7 @@ public inline fun <T, R> T.let(block: (T) -> R): R = block(this)
 
 ```
 
-### also，apply和also的区别
+### also()函数，apply和also的区别
 
 ```kotlin
 public inline fun <T> T.also(block: (T) -> Unit): T { block(this); return this }
