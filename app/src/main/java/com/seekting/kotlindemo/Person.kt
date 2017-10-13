@@ -1,7 +1,7 @@
 package com.seekting.kotlindemo
 
-import android.util.Log
 import com.seekting.kotlindemo.test1.Man
+import com.seekting.kotlindemo.test1.TestActivity
 
 /**
  * Created by Administrator on 2017/9/22.
@@ -9,12 +9,21 @@ import com.seekting.kotlindemo.test1.Man
 data class Person(
         var id: Long,
         var name: String,
-        var age: Int
+        var age: Int? = null
 
 ) {
     fun print() {
         var ss = toString()
-        Log.d("seekting", ss)
+//        Log.d("seekting", ss)
+    }
+
+    fun isOlder(other: Person): Boolean? {
+        if (this.age != null) {
+            if (other.age != null) {
+                val a = other.age + 1
+            }
+        }
+        return true
     }
 }
 
@@ -200,6 +209,44 @@ fun main(args: Array<String>) {
     myRun1("hello", block1) {
 
     }
+    "".toUpperCase()
+    var str: String? = ""
+    strLenSafe(str)
+
+
+    val s: String? = null
+    s.isNullOrBlank()
+    val person2: Person? = null
+    if (person2 != null) {
+        person2.print()
+    }
+    person2.hasName()
+
+}
+
+inline fun Person?.hasName(): Boolean {
+    if (this == null) {
+        return false
+    }
+    return name != null
+}
+
+fun playPerson(person: Person) {
+    println("play person $person")
+}
+
+class MyGroup(
+
+
+) {
+    lateinit var person: Person
+    fun setUp() {
+        person = Person(1L, "seekting", 2)
+    }
+
+    fun pri() {
+        println(person.age)
+    }
 }
 
 fun Person.block() {
@@ -285,3 +332,9 @@ fun myRun(t: String, block: (String) -> Unit) {
 fun myRun1(t: String, block: (String) -> Unit, block1: (String) -> Unit) {
     block(t)
 }
+
+inline fun TestActivity.test() {}
+
+fun strLenSafe(s: String?): Int =
+        if (s != null) s.length else 0
+
