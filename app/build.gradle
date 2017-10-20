@@ -27,4 +27,5 @@ dependencies {
     compile 'com.seekting:demolib:1.0.2'
 
     compile 'com.android.support:appcompat-v7:24.2.0'
+    compile 'com.seekting:demolib:1.0.2'
 }
