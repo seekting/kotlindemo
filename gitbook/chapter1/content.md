@@ -19,7 +19,7 @@ for (i in 0 until length) {
 
 ### if条件
 ```kotlin
-if (c in '0'..'9'){
+if (c in 0..length-1){
 
 }
 
