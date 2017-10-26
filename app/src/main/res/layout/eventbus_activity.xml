@@ -18,23 +18,52 @@
 
         <Button
             android:id="@+id/register"
+            android:text="register"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="@{EventBusViewModel.onClickRegister}"/>
 
         <Button
             android:id="@+id/send"
+            android:text="send"
             android:layout_width="wrap_content"
             android:onClick="@{EventBusViewModel.onClickSend}"
             android:layout_height="wrap_content"/>
 
+
+
         <Button
             android:id="@+id/unregister"
+            android:text="unregister"
             android:onClick="@{EventBusViewModel.onClickUnregister}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             />
-
+        <Button
+            android:id="@+id/sendSticky"
+            android:text="sendSticky"
+            android:layout_width="wrap_content"
+            android:onClick="@{EventBusViewModel.onClickSendSticky}"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/sendSubSticky"
+            android:text="sendSubSticky"
+            android:layout_width="wrap_content"
+            android:onClick="@{EventBusViewModel.onClickSendSubSticky}"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/getSticky"
+            android:text="getSticky"
+            android:layout_width="wrap_content"
+            android:onClick="@{EventBusViewModel.getSticky}"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/removeSticky"
+            android:text="removeSticky"
+            android:layout_width="wrap_content"
+            android:onClick="@{EventBusViewModel.removeSticky}"
+            android:layout_height="wrap_content"/>
 
     </LinearLayout>
 </layout>
