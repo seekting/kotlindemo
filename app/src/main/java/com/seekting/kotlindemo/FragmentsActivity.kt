@@ -41,6 +41,15 @@ class FragmentsActivity : FragmentActivity() {
 }
 
 class MyFragment1 : Fragment() {
+    override fun onHiddenChanged(hidden: Boolean) {
+        super.onHiddenChanged(hidden)
+        Log.d("seekting","2.onHiddenChanged()${hidden}")
+    }
+    override fun setUserVisibleHint(isVisibleToUser: Boolean) {
+        super.setUserVisibleHint(isVisibleToUser)
+        Log.d("seekting", "2.setUserVisibleHint()$isVisibleToUser")
+    }
+
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val tv = TextView(activity)
         tv.text = "2"
@@ -70,7 +79,14 @@ class MyFragment1 : Fragment() {
 class MyFragment : Fragment {
     private lateinit var mContext: Activity
     private lateinit var mTitle: String
-
+    override fun onHiddenChanged(hidden: Boolean) {
+        super.onHiddenChanged(hidden)
+        Log.d("seekting","1.onHiddenChanged()${hidden}")
+    }
+    override fun setUserVisibleHint(isVisibleToUser: Boolean) {
+        super.setUserVisibleHint(isVisibleToUser)
+        Log.d("seekting", "1.setUserVisibleHint()$isVisibleToUser")
+    }
     constructor() {
         Log.d("seekting", "constructor.()")
     }
